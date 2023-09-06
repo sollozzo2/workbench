@@ -1,0 +1,7 @@
+{
+    "getDataUrl":"http://20.187.123.59:10086/getLatest",
+    "uploadUrl":"http://20.187.123.59:10086/upload",
+    "insertUrl":"http://20.187.123.59:10086/insert",
+    "ipUrl":"http://20.187.123.59:10086/getIp"
+
+}
