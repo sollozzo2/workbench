@@ -20,6 +20,12 @@ import FormatIndentIncreaseIcon from '@mui/icons-material/FormatIndentIncrease';
 import ArticleIcon from '@mui/icons-material/Article';
 import ConstructionIcon from '@mui/icons-material/Construction';
 
+import Divider from '@mui/material/Divider';
+
+import Drawer from '@mui/material/Drawer';
+
+import Grid from '@mui/material/Grid';
+
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
@@ -54,9 +60,17 @@ export default function FeatureList(props) {
     }
 
     return (
+      <div sx={{overflow: 'auto'}}>
+
+      
+      <Drawer variant="persistent" ModalProps={{ disableScrollLock: true }} open={props.open} PaperProps={{
+            sx: {
+              mt: '69px', mb: '69px'
+            }
+          }}  >
+
       <Box sx={{mr:1}}> 
         <SmartInput options={features} updateChoices={(value) => dropdownSelect(value)} textLabel="Search"/>
-
 
       <List
         sx={{ width: '300px', maxWidth: 300 }}
@@ -166,5 +180,7 @@ export default function FeatureList(props) {
         </Collapse>
       </List>
       </Box>
+      </Drawer>
+      </div>
     );
   }

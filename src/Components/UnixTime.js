@@ -91,7 +91,7 @@ export default function UnixTime() {
 
                     {unixToDate && <div>
                     <TextField defaultValue={unixTime} label="Unix Number" type="number" onChange={textChange} onKeyDown={handleKeyDown}  variant="filled" 
-                    inputProps={{ maxLength: 11 }} sx={{minWidth: '500px', mt: 2}}/>  </div> }
+                    inputProps={{ maxLength: 11 }} sx={{minWidth: '600px', mt: 2}}/>  </div> }
 
                     <br/>
 
@@ -119,19 +119,19 @@ export default function UnixTime() {
                     </div> }
 
 
-                    <Button variant="contained" onClick={handleConvert} sx={{ mb:1, width:'500px'}}>
+                    <Button variant="contained" onClick={handleConvert} sx={{ mb:1, width:'600px'}}>
                         Convert
                     </Button>
 
                     <br/>
 
-                    <Button variant="contained" onClick={() => {setUnixToDate(!unixToDate)}} sx={{ mb:1, width:'500px'}}>
+                    <Button variant="contained" onClick={() => {setUnixToDate(!unixToDate)}} sx={{ mb:1, width:'600px'}}>
                         Switch
                     </Button>
 
                     <br/>
 
-                    <Button variant="contained" onClick={() => {setUnixToDate(!unixToDate)}} sx={{ mb:1, width:'500px'}}>
+                    <Button variant="contained" onClick={() => {setUnixToDate(!unixToDate)}} sx={{ mb:1, width:'600px'}}>
                         Include Milliseconds
                     </Button>
 
@@ -140,7 +140,7 @@ export default function UnixTime() {
                     
                     <TextField value={(new Date(unixTime).toString())}  onChange={textChange}
                      onKeyDown={handleKeyDown}  variant="filled" 
-                    inputProps={{ maxLength: 11 }} sx={{minWidth: '500px', mt: 2}} />
+                    inputProps={{ maxLength: 11 }} sx={{minWidth: '600px', mt: 2}} />
 
 <br/>
 
@@ -166,7 +166,7 @@ export default function UnixTime() {
                     </div>}
 
                     {!unixToDate && <TextField value={unixTime} label="Unix Number" type="number" onChange={textChange} onKeyDown={handleKeyDown}  variant="filled" 
-                    inputProps={{ maxLength: 11 }} sx={{minWidth: '500px', mt: 2}} />}
+                    inputProps={{ maxLength: 11 }} sx={{minWidth: '600px', mt: 2}} />}
 
                 </CardContent>
             </Card>

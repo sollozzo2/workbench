@@ -24,6 +24,7 @@ import MyIP from './Components/MyIP.js'
 import ColorPicker from './Components/ColorPicker.js'
 import HttpRequester from './Components/HttpRequester.js'
 import UnixTime from './Components/UnixTime.js'
+import TopAppBar from './Components/TopAppBar.js'
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -37,28 +38,36 @@ import './Components/CSS/Corndog.css';
 function App() {
 
   const [feature, setFeature] = useState(0);
+  const [openDrawer, setOpenDrawer] = useState(true);
   //{ this.state.loading == false && <Overlay /> }
 
-chillGraphics
+  // return (
+  //   <div>
+  //     <TopAppBar/>
+  //     <Grid>
 
+  //     </Grid>
+  //   </div>
+  // )
+
+  //<header className="App-header"> </header>
   return ( 
-    <div className='App-header'>
-    <Grid container
-    sx={{height:'100%'}}
-    direction="column"
-    alignItems="center"
-    justifyContent="flex-start"
-    >
-      
-        <header className="App-header">
+    <div >
+      <Grid container
+      sx={{height:'100%', display: 'flex'}}
+      direction="column"
+      alignItems="center"
+      justifyContent="flex-start"
+      >
 
-        <Grid container  direction="row" 
-    alignItems="center"
-    justifyContent="center"
-    
-    >
-            <FeatureList setFeature={setFeature} sx={{alignContent:'top', verticalAlign:'top', paddingTop: '40px',}}/>
-            {feature === 0 && < Hashes sx={{alignContent:'top', verticalAlign:'top', paddingTop: '40px',}}/>}
+      <TopAppBar toggleDrawer={setOpenDrawer} drawerState={openDrawer} />
+
+        
+          <FeatureList setFeature={setFeature} open={openDrawer} />
+
+          
+
+            {feature === 0 && <Hashes />}
             {feature === 1 && <UUID/>}
             {feature === 2 && <FileUpload/>}
             {feature === 3 && <CaseConverter/>}
@@ -68,10 +77,9 @@ chillGraphics
             {feature === 7 && <MyIP/>}
             {feature === 8 && <ColorPicker/>}
             {feature === 9 && <HttpRequester/>}
-            {feature === 10 && <UnixTime/>}
-          </Grid>
-        </header>
-    </Grid>
+            {feature === 10 && <UnixTime/>}    
+        
+      </Grid>
     </div>
   );
 }

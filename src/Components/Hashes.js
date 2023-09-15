@@ -58,7 +58,7 @@ export default function Hashes() {
     
 
     return (
-        <div>
+        <Box sx={{marginLeft: '30%'}}>
             <Card sx={{ minWidth: 600, mb:2 }}>
                 <CardContent>
                     <Typography  variant="h6" color="text.primary" gutterBottom>
@@ -87,6 +87,6 @@ export default function Hashes() {
                     Copied!
                 </Alert> 
             </Snackbar>
-        </div>
+        </Box>
     )
 }
